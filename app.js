@@ -1,7 +1,52 @@
 const express = require('express')
 const morgan = require('morgan')
 const helmet = require('helmet')
-con
+const cors   = require('cors')
+
+const sam = express()
+
+sam.use(morgan('dev'))
+sam.use(helmet())
+sam.use(cors())
+sam.use(express.json())
+
+sam.get('/',(request,response)=>{
+    response.json({
+        hello:"sam is a multitalented bot"
+    })
+})
+
+const port = 5000
+sam.listen(port, () => {
+    console.log(`Listening: http://localhost:${port}`)
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
