@@ -19,7 +19,7 @@ sam.get('/',(request,response)=>{
 const port = 5000
 sam.listen(port, () => {
     console.log(`Listening: http://localhost:${port}`)
-  })
+})
 
 
 
